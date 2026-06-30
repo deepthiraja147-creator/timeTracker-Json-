@@ -1,0 +1,240 @@
+* {
+    margin: 0;
+    padding: 0;
+    box-sizing: border-box;
+    font-family: Rubik, sans-serif;
+}
+
+body {
+
+    background: #0f1424;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    min-height: 100vh;
+}
+
+.container {
+
+    width: 1110px;
+
+    display: grid;
+    grid-template-columns: 260px repeat(3, 1fr);
+
+    gap: 30px;
+}
+
+/* Profile */
+
+.profile {
+
+    background: #1c204b;
+    border-radius: 18px;
+    overflow: hidden;
+    grid-row: span 2;
+}
+
+.profile-top {
+    background: #5847eb;
+    padding: 35px;
+    height: 360px;
+    border-radius: 18px;
+}
+
+.profile-top img {
+    width: 80px;
+    border: 3px solid white;
+    border-radius: 50%;
+    margin-bottom: 35px;
+}
+
+.profile-top p {
+    color: #bdc1ff;
+}
+
+.profile-top h1 {
+    color: white;
+    font-weight: 300;
+    font-size: 42px;
+    margin-top: 10px;
+}
+
+.profile-bottom {
+    display: flex;
+    flex-direction: column;
+    padding: 30px;
+    gap: 20px;
+}
+
+.profile-bottom button {
+    background: none;
+    border: none;
+    color: #6f76c8;
+    font-size: 18px;
+    text-align: left;
+    cursor: pointer;
+}
+
+.profile-bottom button:hover,
+.profile-bottom button.active {
+    color: white;
+}
+
+/* Cards */
+
+.card {
+    position: relative;
+    height: 240px;
+    border-radius: 18px;
+    overflow: hidden;
+}
+
+.card-top {
+    height: 65px;
+    background-repeat: no-repeat;
+    background-position: right 20px top -5px;
+}
+
+.card-content {
+    position: absolute;
+    left: 0;
+    right: 0;
+    bottom: 0;
+    top: 45px;
+    background: #1c204b;
+    padding: 30px;
+    border-radius: 18px;
+    transition: .3s;
+}
+
+.card-content:hover {
+    background: #34397b;
+}
+
+.row {
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+}
+
+.row h3 {
+    color: white;
+}
+
+.row span {
+    color: #bbc0ff;
+    font-size: 22px;
+}
+
+.hours {
+    margin-top: 30px;
+    font-size: 56px;
+    font-weight: 300;
+    color: white;
+}
+
+.previous {
+    margin-top: 8px;
+    color: #bbc0ff;
+}
+
+@media (max-width: 900px) {
+
+  body {
+    padding: 20px;
+    align-items: flex-start;
+  }
+
+  .container {
+    width: 100%;
+    grid-template-columns: 1fr;
+    gap: 24px;
+  }
+
+  /* PROFILE SECTION */
+  .profile {
+    grid-row: auto;
+  }
+
+  .profile-top {
+    height: auto;
+    display: flex;
+    align-items: center;
+    gap: 20px;
+    padding: 25px;
+  }
+
+  .profile-top img {
+    width: 70px;
+    margin-bottom: 0;
+  }
+
+  .profile-top p {
+    font-size: 14px;
+  }
+
+  .profile-top h1 {
+    font-size: 26px;
+    line-height: 1.2;
+  }
+
+  .profile-bottom {
+    flex-direction: row;
+    justify-content: space-between;
+    padding: 20px 25px;
+  }
+
+  .profile-bottom button {
+    font-size: 15px;
+  }
+
+  /* CARDS */
+  .card {
+    height: 180px;
+  }
+
+  .card-top {
+    height: 55px;
+  }
+
+  .card-content {
+    padding: 18px;
+  }
+
+  .row h3 {
+    font-size: 16px;
+  }
+
+  .row span {
+    font-size: 18px;
+  }
+
+  .hours {
+    font-size: 34px;
+    margin-top: 20px;
+  }
+
+  .previous {
+    font-size: 13px;
+    margin-top: 5px;
+  }
+}
+
+@media (max-width: 480px) {
+
+  .profile-top h1 {
+    font-size: 22px;
+  }
+
+  .hours {
+    font-size: 28px;
+  }
+
+  .profile-bottom {
+    gap: 10px;
+  }
+
+  .profile-bottom button {
+    font-size: 14px;
+  }
+}
